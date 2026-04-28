@@ -5,7 +5,7 @@ A custom Python pipeline that extracts keyframes from a panning video and stitch
 
 ## ✨ Key Features & Extra Implementations
 
-1. **Video Keyframe Extraction (Extra Feature)**
+1. **Video Keyframe Extraction**
    - Instead of manually taking individual photos with insufficient overlap, the program automatically reads a video file and extracts $N$ evenly spaced keyframes. This guarantees extremely high overlap between adjacent frames, minimizing `cv::BRISK` feature extraction failures and RANSAC outliers.
 
 2. **Chained Homography for $N$-Images**
@@ -14,7 +14,7 @@ A custom Python pipeline that extracts keyframes from a panning video and stitch
 3. **Dynamic Canvas Sizing**
    - After computing the chained homographies, the algorithm calculates the extreme coordinates (bounding box) of all transformed corners using `cv.perspectiveTransform`. It then applies a global translation matrix ($T$) to ensure no parts of the panorama are cropped out.
 
-4. **Average Blending for Seamless Seams (Extra Feature)**
+4. **Average Blending for Seamless Seams**
    - To eliminate harsh, visible seams caused by simple overlapping, the pipeline employs a weighted average blending technique. It creates an alpha mask for each warped image, calculates the pixel intersection frequencies (Weight Map), and divides the accumulated pixel values by these weights to create a natural transition.
 
 ## 🔬 Limitation Analysis & Engineering Discussions
