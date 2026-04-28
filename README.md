@@ -1,4 +1,4 @@
-# Video-based Panorama Stitcher
+#   Panorama Stitcher
 
 A custom Python pipeline that extracts keyframes from a panning video and stitches them into a seamless panoramic image using Planar Homography and Average Blending. 
 
@@ -29,4 +29,12 @@ To fundamentally resolve this, a pre-processing step involving **Cylindrical or 
 
 ## 🚀 Execution Result
 
-![Result](./result.jpg)
+### 1. Source Panning Video
+| Source Video (Input) |
+| :---: |
+| ![Source Video](./data/source.gif) |
+
+*The above video shows the continuous frames from which keyframes were extracted for the stitching process.*
+
+### 2. Result
+![Result](./data/result.jpg)
