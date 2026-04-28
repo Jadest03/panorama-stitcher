@@ -2,8 +2,6 @@
 
 A custom Python pipeline that extracts keyframes from a panning video and stitches them into a seamless panoramic image using Planar Homography and Average Blending. 
 
-## 📌 Overview
-This project implements a robust image stitching pipeline from scratch without relying on high-level APIs like `cv::Stitcher`. To maximize feature matching stability and handle large fields of view, this pipeline takes a video file (`.mp4`, `.mov`) as input, intelligently extracts keyframes, and continuously stitches them relative to a center anchor frame.
 
 ## ✨ Key Features & Extra Implementations
 
